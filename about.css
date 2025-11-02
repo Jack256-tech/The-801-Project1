@@ -1,0 +1,155 @@
+/* === RESET & BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+    background: #121212 url('images/about-bg.jpg') center/cover no-repeat fixed;
+    line-height: 1.8;
+    min-height: 100vh;
+    
+    overflow-x: hidden;
+    color: aliceblue;
+    align-items: center;
+}
+/* Navigation Bar */
+.nav {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.logo img {
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #d4af37;
+    transition: transform 0.3s ease;
+    width: 100px;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.bar {
+    display: flex;
+    gap: 2rem;
+}
+
+.bar a {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.bar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #d4af37;
+    transition: width 0.3s ease;
+}
+
+.bar a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.7);
+}
+
+.bar a:hover::after {
+    width: 100%;
+}
+
+h1{
+    font-size: 5.25rem;
+    margin: 0 0 0.5rem 0;
+    color:gold;
+    text-align: center;
+    
+}
+h2,h3,h4{
+    font-size: 2.25rem;
+    color: gold;
+    margin-bottom: 1rem;
+    text-align:center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.lead{
+    color:  black (255,255,255,0.9);
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: medium;
+    font-size: 2.25rem;
+}
+.deal{
+    color: yellow (255,255,255,0.9);
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: medium;
+    font-size: 2.25rem;
+}
+.mgt{
+     color:  black (255,255,255,0.9);
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: medium;
+    font-size: 2.25rem;
+    
+}
+
+.bib{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: large;
+    font-size: 1.25rem;
+    color:gold;
+    border-radius: 400px;
+    
+}
+
+
+footer {
+    background: #000;
+    color: #d4af37;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.5);
+}
+footer {
+    
+    height: auto;
+}
+.arsenal,img{
+    width:300px;
+    height:300px;
+    align-items: center;
+    border-radius: 50px;
+    align-items: center;
+  
+}
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+

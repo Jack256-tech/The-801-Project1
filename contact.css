@@ -1,0 +1,319 @@
+/* === RESET & BASE STYLES === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0f0f0f url('images/contact-bg.jpg') center/cover no-repeat fixed;
+    color: #f5f5f5;
+    line-height: 1.8;
+    min-height: 100vh;
+    display:263 flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+.nav {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.logo img {
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #d4af37;
+    transition: transform 0.3s ease;
+    width: 100px;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.bar {
+    display: flex;
+    gap: 2rem;
+}
+
+.bar a {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.bar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #d4af37;
+    transition: width 0.3s ease;
+}
+
+.bar a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.7);
+}
+
+.bar a:hover::after {
+    width: 100%;
+}
+
+/* === HEADINGS === */
+main h2 {
+    text-align: center;
+    font-size: 3.2rem;
+    margin: 2.5rem 0 0.5rem;
+    color: #d4af37;
+    font-weight: 800;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    letter-spacing: 1.5px;
+}
+
+main h3 {
+    text-align: center;
+    font-size: 2.1rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.lead {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    padding: 0 1rem;
+}
+
+/* === FORM CONTAINER === */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.form-container {
+    background: rgba(30, 30, 30, 0.85);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid #444;
+    flex: 1;
+    min-width: 350px;
+    max-width: 500px;
+}
+
+form p {
+    margin-bottom: 1.2rem;
+    
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: darkgoldenrod;
+    font-size: 1.05rem;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 2px solid #555;
+    border-radius: 8px;
+    background: #222;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #d4af37;
+    background: #2a2a2a;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+form select {
+    height: 50px;
+    cursor: pointer;
+}
+
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.hrm {
+    margin-top: 1.5rem;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: #d4af37;
+    color: #000;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background: #e0c050;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* === ADDRESS & SOCIAL === */
+.address-container {
+    background: rgba(30, 30, 30, 0.85);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid #444;
+    flex: 1;
+    min-width: 350px;
+    max-width: 500px;
+}
+
+.address-container h1 {
+    font-size: 2rem;
+    color: #d4af37;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.deal, .bib, .mgt {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.deal strong, .bib strong, .mgt strong {
+    color: #d4af37;
+}
+
+.deal a, .bib a {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.deal a:hover, .bib a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.social-media a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-media a:hover {
+    transform: translateY(-5px) scale(1.1);
+}
+
+.social-media img {
+    
+    border-radius: 10px;
+    object-fit: contain;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.social-media a:hover img {
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+    border-radius: 12px;
+}
+
+/* === FOOTER === */
+footer {
+    margin-top: auto;
+    background: rgba(0, 0, 0, 0.95);
+    color: gold;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.1rem;
+    border-top: 1px solid #444;
+}
+
+footer p {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 992px) {
+    main h2 { font-size: 2.8rem; }
+    .container { gap: 2rem; }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .nav .bar {
+        margin-top: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    main h2 { font-size: 2.5rem; }
+    main h3 { font-size: 1.8rem; }
+    .form-container, .address-container {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav .logo img { height: 60px; }
+    main h2 { font-size: 2.2rem; }
+    .lead { font-size: 1.1rem; }
+    form input, form select, form textarea { font-size: 0.95rem; }
+    .social-media img { width : 40px; height: 40px; }
+}

@@ -1,0 +1,308 @@
+/* === RESET & BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0a0a0a url('images/services-bg.jpg') center/cover no-repeat fixed;
+    color: #f5f5f5;
+    line-height: 1.8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+/* Navigation Bar */
+.nav {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.logo img {
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #d4af37;
+    transition: transform 0.3s ease;
+    width: 100px;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.bar {
+    display: flex;
+    gap: 2rem;
+}
+
+.bar a {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.bar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #d4af37;
+    transition: width 0.3s ease;
+}
+
+.bar a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.7);
+}
+
+.bar a:hover::after {
+    width: 100%;
+}
+
+/* === HEADINGS === */
+h1 {
+    text-align: center;
+    font-size: 4.2rem;
+    margin: 2.5rem 0 0.5rem;
+    color: #d4af37;
+    font-weight: 800;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    letter-spacing: 1.5px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.saka {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    font-size: 1.55rem;
+    color: #e0e0e0;
+    padding: 0 1rem;
+    line-height: 1.9;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.odegard {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+    padding: 0 1rem;
+    line-height: 1.9;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
+/* === SERVICE CARDS (Main Feature) === */
+.features {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.features ul {
+    list-style: none;
+}
+
+.features li {
+    background: rgba(30, 30, 30, 0.88);
+    margin: 2.5rem 0;
+    padding: 2.2rem;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    border-left: 6px solid #d4af37;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.features li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #d4af37, #e0c050);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.features li:hover::before {
+    opacity: 1;
+}
+
+.features li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(212, 175, 55, 0.25);
+    border-left-color: #e0c050;
+}
+
+.features li strong {
+    display: block;
+    font-size: 1.7rem;
+    color: #d4af37;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    position: relative;
+    padding-left: 30px;
+}
+
+
+
+.features li strong::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.features li p {
+    font-size: 1.1rem;
+    color: #d4af37;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+/* === IMAGE GALLERY INSIDE CARD === */
+.arsenal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.arsenal img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #444;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+}
+
+.arsenal img:hover {
+    transform: translateY(-8px) scale(1.04);
+    border-color: #d4af37;
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3);
+}
+
+/* === VIDEO IN CARD === */
+video {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 16px;
+    margin: 1.5rem auto;
+    display: block;
+    border: 4px solid #d4af37;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+    transition: all 0.4s ease;
+}
+
+video:hover {
+    transform: scale(1.02);
+    box-shadow: 0 25px 50px rgba(212, 175, 55, 0.3);
+}
+
+/* === GUARANTEE BANNER === */
+.features > p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #d4af37;
+    margin: 3.5rem auto;
+    padding: 1.8rem 2rem;
+    background: rgba(212, 175, 55, 0.18);
+    border: 2px dashed #d4af37;
+    border-radius: 25px;
+    max-width: 900px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+/* === FOOTER === */
+footer {
+    margin-top: auto;
+    background: rgba(0, 0, 0, 0.95);
+    color: gold;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.1rem;
+    border-top: 1px solid #444;
+}
+
+footer p {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 992px) {
+    h1 { font-size: 3.5rem; }
+    h2 { font-size: 2.2rem; }
+    .arsenal img { height: 140px; }
+    .features li { padding: 1.8rem; }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .nav .bar {
+        margin-top: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2rem; }
+    .features li strong { font-size: 1.5rem; }
+    .arsenal { grid-template-columns: 1fr 1fr; }
+    video { max-width: 100%; }
+}
+
+@media (max-width: 480px) {
+    .nav .logo img { height: 60px; }
+    h1 { font-size: 2.3rem; }
+    .features li { padding: 1.5rem; }
+    .features li strong { font-size: 1.4rem; }
+    .arsenal { grid-template-columns: 1fr; }
+    .arsenal img { height: 180px; }
+}
